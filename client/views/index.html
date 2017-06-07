@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="tinyzooApp">
+  <head>
+    <meta charset="utf-8">
+
+
+    <title>Tinyzoo Server</title>
+
+
+  </head>
+  <body>
+    <div ng-controller="tinyzoosController">
+      <h1>There are {{tinyzoos.length}} tinyzoos</h1>
+      <ul>
+        <li ng-repeat="tinyzoo in tinyzoos">
+        {{tinyzoo.name}}
+        </li>
+      </ul>
+      <form ng-submit="createTinyzoo()">
+
+          <input type="text" placeholder="Tinyzoo name" ng-model="tinyzooName" />
+          <button type="submit">Add</button>
+
+
+      </form>
+    </div>
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-resource.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/controllers/tinyzoos-controllers.js"></script>
+    
+      </body>
+</html>
