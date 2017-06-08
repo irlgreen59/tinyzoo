@@ -4,9 +4,10 @@ var express           = require('express'),
   mongoose            = require('mongoose'),
   tinyzoosController  = require('./server/controllers/tinyzoos-controller');
 
-mongoose.connect('mongodb://localhost:27017/mean');
+mongoose.connect('mongodb://localhost:27017/tinyzoo');
 
-app.use(bodyParser());
+// app.use(bodyParser());
+app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/', function (req, res) {
   res.sendfile(__dirname + '/client/views/index.html');
